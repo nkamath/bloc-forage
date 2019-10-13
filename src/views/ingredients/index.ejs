@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+      <h1>Ingredients</h1>
+
+      <a href="/ingredients/new" class="btn btn-success">New Ingredient</a>
+
+      <table style="width:100%">
+        <tr>
+          <th>Name</th>
+          <th>Source</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <% ingredients.forEach((ingredient) => { %>
+          <tr>
+            <td> <%= ingredient.name %> </td>
+            <td> <%= ingredient.source %> </td>
+            <td> <a href="/ingredients/<%= ingredient.id %>/edit" class="btn btn-warning">Edit</a> </td>
+            <td> <form style="display:initial" action="/ingredients/<%= ingredient.id %>/destroy" method="post">
+            <button type="submit" class="btn btn-danger">Delete</button> </td>
+        </form>
+          </tr>
+        <% }) %>
+      </table>
+
+    </main>
+  </body>
+</html>

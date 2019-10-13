@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body>
+
+    <% include ./partials/navbar.ejs %>
+
+
+      <main class="container">
+        <% include ../static/partials/messages.ejs %>
+
+        <h1 style="text-align:center; margin-top:50px;">Welcome to Forage</h1>
+        <img src="../landing_hero.png" style="width:100%; height:auto;" alt="Forage Table">
+        <section class="row text-center">
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Create or import recipes</h4>
+          </section>
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Plan customized meals for the week</h4>
+          </section>
+
+          <section class="col-lg-4">
+            <h4 class="card-title">Automatically get a shopping list</h4>
+          </section>
+
+        </section>
+      </main>
+
+      <% include ./partials/baseScripts.ejs %>
+    </body>
+</html>
